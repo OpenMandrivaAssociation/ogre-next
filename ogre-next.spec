@@ -25,9 +25,11 @@ BuildRequires:	pkgconfig(OIS)
 BuildRequires:  pkgconfig(OpenEXR)
 BuildRequires:  pkgconfig(python)
 BuildRequires:  pkgconfig(sdl2)
+BuildRequires:  pkgconfig(xaw7)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xrandr)
 BuildRequires:	pkgconfig(xt)
+BuildRequires:  pkgconfig(vulkan)
 BuildRequires:	pkgconfig(zziplib)
 BuildRequires:	tinyxml-devel
 BuildRequires:  pugixml-devel
