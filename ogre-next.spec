@@ -8,7 +8,8 @@ Url:		https://www.ogre3d.org/
 Source0:	https://github.com/OGRECave/ogre-next/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 #Source1:        https://github.com/ocornut/imgui/archive/%{imgui_short_ver}/imgui-%{imgui_ver}.tar.gz
 
-BuildRequires:	cmakeBuildRequires:	ninja
+BuildRequires:	cmake
+BuildRequires:	ninja
 BuildRequires:	boost-devel
 BuildRequires:	freeimage-devel
 BuildRequires:  qt5-qtbase-devel
