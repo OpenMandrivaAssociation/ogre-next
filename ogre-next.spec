@@ -40,3 +40,31 @@ intuitive for developers to produce games and demos utilising 3D hardware.
 The class library abstracts all the details  of  using the underlying system
 libraries like Direct3D and OpenGL and provides an interface based on world
 objects and other intuitive classes.
+
+%prep
+%autosetup -p1
+
+%cmake \
+        -DOGRE_BUILD_DOCS:BOOL=OFF \
+        -DOGRE_BUILD_DEPENDENCIES=FALSE \
+        -DOGRE_BUILD_PLUGIN_CG:BOOL=OFF \
+        -DOGRE_INSTALL_SAMPLES:BOOL=ON \
+        -DOGRE_INSTALL_SAMPLES_SOURCE:BOOL=ON \
+        -DOGRE_CONFIG_MEMTRACK_RELEASE:BOOL=OFF \
+	      -DOGRE_BUILD_COMPONENT_OVERLAY:BOOL=ON \
+	      -DOGRE_BUILD_COMPONENT_OVERLAY_IMGUI:BOOL=OFf \
+	      -DOGRE_BUILD_COMPONENT_CSHARP:BOOL=OFF \
+	      -DOGRE_BUILD_COMPONENT_JAVA:BOOL=OFF \
+	      -DOGRE_NODELESS_POSITIONING:BOOL=ON \
+	      -DOGRE_RESOURCEMANAGER_STRICT=0 \
+	      -G Ninja
+
+%build
+#export CC=gcc
+#export CXX=g++
+%ninja_build -C build
+
+%install
+%ninja_install -C build
+
+%files
