@@ -1,6 +1,6 @@
 Summary:	Object-Oriented Graphics Rendering Engine
 Name:		ogre-next
-Version:	2.3.3
+Version:	3.0.0
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
