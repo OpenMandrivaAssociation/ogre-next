@@ -53,6 +53,12 @@ The class library abstracts all the details  of  using the underlying system
 libraries like Direct3D and OpenGL and provides an interface based on world
 objects and other intuitive classes.
 
+%package -n samples
+Summary:        Samples for %{name}
+
+%description -n samples
+This package contains samples files for ogre-next.
+
 %package -n %{libname}
 Summary:        Shared library for %{name}
 
@@ -98,7 +104,7 @@ This package contains development files for %{name}.
 %{_bindir}/OgreMeshTool
 %{_datadir}/OGRE/
 
-%finel -n sample
+%files -n samples
 %{_bindir}/Sample_*
 
 %files -n %{libname}
